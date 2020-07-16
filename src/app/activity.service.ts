@@ -6,4 +6,15 @@ import { Injectable } from '@angular/core';
 export class ActivityService {
 
   constructor() { }
+
+  //fetch only single Activity in the application
+  getActivity() {
+
+  }
+
+  //fetch AllActivity avaliable in the application
+  getAllActivity() {
+    
+  }
+  
 }
