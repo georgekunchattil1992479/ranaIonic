@@ -17,42 +17,20 @@
   <app-explore-container name="Tab 1 page"></app-explore-container> 
 -->
 
-<ion-card>
-   <ion-img src="https://media-exp1.licdn.com/dms/image/C5103AQHmjmBoXPFE0w/profile-displayphoto-shrink_200_200/0?e=1600300800&v=beta&t=qzg_om5RMxJXgyC9JcApBjHeNNqZT1UCjDKTeCidiNk"></ion-img>
+<!-- Ionic Card sample
+ <ion-card>
+  <ion-img src="https://media-exp1.licdn.com/dms/image/C5103AQHmjmBoXPFE0w/profile-displayphoto-shrink_200_200/0?e=1600300800&v=beta&t=qzg_om5RMxJXgyC9JcApBjHeNNqZT1UCjDKTeCidiNk"></ion-img>
+  <ion-card-header>
+    <ion-card-title>Georgy's Activity</ion-card-title>
+  </ion-card-header>
+ </ion-card> 
+-->
+ 
+  <ion-card button *ngFor="let activity of (activityList | async)">
+   <ion-img [src]="activity.cropped"></ion-img>
    <ion-card-header>
-     <ion-card-title>Georgy's Activity</ion-card-title>
+     <ion-card-title>{{activity.name}}</ion-card-title>
    </ion-card-header>
-</ion-card>
-
-<ion-card>
-  <ion-img src="https://media-exp1.licdn.com/dms/image/C5103AQHmjmBoXPFE0w/profile-displayphoto-shrink_200_200/0?e=1600300800&v=beta&t=qzg_om5RMxJXgyC9JcApBjHeNNqZT1UCjDKTeCidiNk"></ion-img>
-  <ion-card-header>
-    <ion-card-title>Georgy's Activity</ion-card-title>
-  </ion-card-header>
-</ion-card>
-
-<ion-card>
-  <ion-img src="https://media-exp1.licdn.com/dms/image/C5103AQHmjmBoXPFE0w/profile-displayphoto-shrink_200_200/0?e=1600300800&v=beta&t=qzg_om5RMxJXgyC9JcApBjHeNNqZT1UCjDKTeCidiNk"></ion-img>
-  <ion-card-header>
-    <ion-card-title>Georgy's Activity</ion-card-title>
-  </ion-card-header>
-</ion-card>
-<ion-card>
-  <ion-img src="https://media-exp1.licdn.com/dms/image/C5103AQHmjmBoXPFE0w/profile-displayphoto-shrink_200_200/0?e=1600300800&v=beta&t=qzg_om5RMxJXgyC9JcApBjHeNNqZT1UCjDKTeCidiNk"></ion-img>
-  <ion-card-header>
-    <ion-card-title>Georgy's Activity</ion-card-title>
-  </ion-card-header>
-</ion-card>
-<ion-card>
-  <ion-img src="https://media-exp1.licdn.com/dms/image/C5103AQHmjmBoXPFE0w/profile-displayphoto-shrink_200_200/0?e=1600300800&v=beta&t=qzg_om5RMxJXgyC9JcApBjHeNNqZT1UCjDKTeCidiNk"></ion-img>
-  <ion-card-header>
-    <ion-card-title>Georgy's Activity</ion-card-title>
-  </ion-card-header>
-</ion-card>
-<ion-card>
-  <ion-img src="https://media-exp1.licdn.com/dms/image/C5103AQHmjmBoXPFE0w/profile-displayphoto-shrink_200_200/0?e=1600300800&v=beta&t=qzg_om5RMxJXgyC9JcApBjHeNNqZT1UCjDKTeCidiNk"></ion-img>
-  <ion-card-header>
-    <ion-card-title>Georgy's Activity</ion-card-title>
-  </ion-card-header>
-</ion-card>
+  </ion-card>
+ 
 </ion-content>

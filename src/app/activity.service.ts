@@ -19,7 +19,7 @@ export class ActivityService {
   }
 
   //fetch AllActivity avaliable in the application
-  getAllActivity(): Observable<Activity[]>{ //for activity method, it return with Observablle data type
+  getAllActivities(): Observable<Activity[]>{ //for activity method, it return with Observablle data type
     return this._httpClient.get<Activity[]>(API); //fetching data from API
   }
   
