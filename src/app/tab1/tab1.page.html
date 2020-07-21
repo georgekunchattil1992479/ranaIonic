@@ -25,8 +25,8 @@
   </ion-card-header>
  </ion-card> 
 -->
- 
-  <ion-card button *ngFor="let activity of (activityList | async)">
+ <!--routerLink creates new link to the application using activity (say 'activity-detail')-->
+  <ion-card routerLink="activity-detail" button *ngFor="let activity of (activityList | async)">
    <ion-img [src]="activity.cropped"></ion-img>
    <ion-card-header>
      <ion-card-title>{{activity.name}}</ion-card-title>

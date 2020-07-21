@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'activity-detail',
+    path: 'activity-detail', //here activity-detail is activity which child of Tab 1
     loadChildren: () => import('./activity-detail/activity-detail.module').then( m => m.ActivityDetailPageModule)
   }
 ];
