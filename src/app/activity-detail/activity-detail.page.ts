@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+import {Observable} from 'rxjs'
+import { Activity } from '../types';
+import { ActivityService } from '../activity.service';
+import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-activity-detail',
   templateUrl: './activity-detail.page.html',
@@ -7,7 +12,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivityDetailPage implements OnInit {
 
-  constructor() { }
+  activityDetail: Observable<Activity>
+
+  constructor(
+    activityService: ActivityService,
+    activatedRoute: ActivatedRoute
+  ) {
+     const activityID = activatedRoute.snapshot.params["activityID"]
+     console.log (activityID); //show activity id works based on group content and can see in browser console
+     this.activityDetail = activityService.getActivity(activityID)
+   }
 
   ngOnInit() {
   }
