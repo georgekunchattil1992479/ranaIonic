@@ -14,7 +14,12 @@ export class Tab1Page {
   activityList: Observable<Activity[]>;
 
   constructor(activityService: ActivityService) {
-    this.activityList = activityService.getAllActivities();
+
+    //Timer for 3 sec to load contents in class 'activityList'
+    setTimeout(() => {
+       this.activityList = activityService.getAllActivities();
+    }, 3000);
+    
   }
 
 }
